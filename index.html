@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TCS NQT DSA Question Bank</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-root">
+    <header class="app-header">
+      <div class="app-title">TCS NQT Question Bank</div>
+      <div class="app-subtitle">Click a topic, then a question, then show answer</div>
+    </header>
+
+    <div class="app-layout">
+      <aside class="sidebar">
+        <div class="sidebar-title">Topics</div>
+        <div id="category-list" class="category-list"></div>
+      </aside>
+
+      <main class="main-panel">
+        <section class="toolbar">
+          <div id="current-category-label" class="toolbar-title">Select a topic from the left</div>
+          <button id="toggle-sidebar" class="answer-toggle toolbar-toggle">Hide topics</button>
+          <select id="search-scope" class="search-scope">
+            <option value="topic">Search in current topic</option>
+            <option value="all">Search in all topics</option>
+          </select>
+          <select id="priority-filter" class="priority-filter">
+            <option value="all">All questions</option>
+            <option value="must">High priority only</option>
+          </select>
+          <input
+            id="search-input"
+            class="search-input"
+            type="text"
+            placeholder="Search questions..."
+            autocomplete="off"
+          />
+        </section>
+
+        <section id="question-list" class="question-list">
+          <div class="placeholder">
+            Choose a topic like Arrays, Strings, or Sliding Window to start.
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
